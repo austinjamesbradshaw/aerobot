@@ -1,6 +1,6 @@
 import Layout from "src/core/layouts/Layout"
 import { BlitzPage } from "@blitzjs/next"
-import { Box, Button, Flex, Image, Text, VStack } from "@chakra-ui/react"
+import { Button, Flex, Image, Text, VStack } from "@chakra-ui/react"
 import Form from "src/core/components/Form"
 import LabeledTextField from "src/core/components/LabeledTextField"
 import { useMutation } from "@blitzjs/rpc"
@@ -31,7 +31,7 @@ const ShockwaveCalculator: BlitzPage = () => {
         schema={ShockwaveCalculatorSchema}
         style={{ padding: 0, height: "100%", width: "100%", overflow: "scroll" }}
       >
-        <VStack h="100%" w="100%" px={6} overflow="scroll" spacing={4}>
+        <VStack h="100%" w="100%" p={6} overflow="scroll" spacing={4}>
           <LabeledTextField name="gamma" label="γ" />
           <LabeledTextField name="M1" label="M1" />
           <LabeledTextField name="theta" label="θ [deg]" />

@@ -2,7 +2,8 @@ import { FormControl, FormErrorMessage, FormLabel, Input } from "@chakra-ui/reac
 import { forwardRef, ComponentPropsWithoutRef, PropsWithoutRef } from "react"
 import { useField, UseFieldConfig } from "react-final-form"
 
-export interface LabeledTextFieldProps extends PropsWithoutRef<JSX.IntrinsicElements["input"]> {
+export interface LabeledTextFieldProps
+  extends Omit<PropsWithoutRef<JSX.IntrinsicElements["input"]>, "size"> {
   /** Field name. */
   name: string
   /** Field label. */
@@ -12,6 +13,7 @@ export interface LabeledTextFieldProps extends PropsWithoutRef<JSX.IntrinsicElem
   controlProps?: PropsWithoutRef<JSX.IntrinsicElements["div"]>
   labelProps?: ComponentPropsWithoutRef<"label">
   fieldProps?: UseFieldConfig<string>
+  variant?: string
   props?: object
 }
 

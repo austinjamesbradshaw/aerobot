@@ -1,0 +1,15 @@
+9/2/08 pgc
+
+Folder with a sample code that can be modified for your needs. The code
+reads in either temperatura or enthalpy (depending of the value of icase) and
+returns either enthalpy or temperature.
+
+To generate the executable 'ta' type
+
+make
+
+To run the code type
+
+ta 'inputfile' 'outputfile'
+
+where inputfile is dat/input.dat and outputfile is whatever you want.
