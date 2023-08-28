@@ -1,0 +1,10 @@
+This directory includes the routines that model air and stoichiometric
+gas properties (based on tables used in AERO351). You need to do the
+following (on a unix/linux machine):
+
+1/ gunzip tables.tar.gz
+2/ tar xvf tables.tar
+
+Then read README and check the main.f file for an example. On unix/linux,
+you can create an executable "example" by typing: make.
+

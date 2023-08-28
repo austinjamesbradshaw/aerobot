@@ -1,0 +1,13 @@
+9//2/08 pgc
+
+Attached is the file with the routines that model air and
+stoichiometric gas properties (based on tables used in AERO351). You
+need to do the following (on a unix machine):
+
+tar xvfz tables.tgz
+
+Then read README and check the main.f file for an example. On unix,
+you can create an executable "example" by typing: make.
+
+I also included a folder sample that can be used as a template for
+calling these subroutines.

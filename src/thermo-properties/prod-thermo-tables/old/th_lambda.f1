@@ -1,0 +1,23 @@
+      subroutine th_lambda(t1, h1, xlambda, xminl, icase)
+!
+!     Returns either t(h) for case=0 or h(t) for case=1
+!
+      implicit none
+      integer icase
+      real    t1, s1, sair, ssto, tair, term, tsto, xlambda, xminl
+!-----------------------------------------------------------------------
+      term = 1.0 / (1.0 + xlambda * xminl)
+      if (icase .eq. 1) then
+         call th_air(t1, hair, icase)
+         call th_sto(t1, hsto, icase)
+         h1   = (1.0 + xminl) * term * hsto +
+     $          (xlambda - 1.0) * xminl * term * hair
+      else
+         call th_air(tair, h1, icase)
+         call th_sto(tsto, h1, icase)
+         t1   = (1.0 + xminl) * term * tsto +
+     $          (xlambda - 1.0) * xminl * term * tair
+      endif
+!
+      return
+      end

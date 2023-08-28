@@ -1,0 +1,5 @@
+&input_data
+ icase = 1,
+ x     = 400.0,
+ interactive = t
+/

@@ -1,0 +1,10 @@
+ A B C from UIN
+a=2 b=2 c=9
+Tair=   290.000 K, hair=   290.069 kJ/kg
+lambda=     3.900
+Thot=   970.000K, hhot=  1030.887 kJ/kg
+cpair=   1.00024 kJ/(kgK), cphot=   1.06277
+ kJ/(kgK)
+hmix=   429.207 kJ/(kgK)
+lambdamix=    21.060
+hmix=   429.207kJ/(kgK), tmix=   427.078 K, cpmix=   1.00498 kJ/(kgK)

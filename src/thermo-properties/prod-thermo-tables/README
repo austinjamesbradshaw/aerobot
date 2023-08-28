@@ -1,0 +1,57 @@
+PGC 9/1/02; 6/12/15; 5/11/19
+Nomenclature:
+T - temperature [K]
+h - enthalpy [kJ/kg]
+s - entropy [kJ/(kg K)]
+p - pressure [bar]
+r - gas constant [kJ/(kg K)]
+lambda - excess air coeff. [-]
+minL - amount of air required for stoichiometric combustion [kg air/kg fuel]
+icase - switch [-](allows, for example, to either specify T and calculate h or
+vice-versa; can be used as a switch between other variables, depending
+on the subroutine)
+
+The following routines interpolate the T-h-s tables for air and stoichiometric
+gases.
+
+Name - Description
+###########################################################################
+th_air - air, p=1 bar - finds h as a function of T (icase=1) or vice-versa (icase<>1)
+th_sto - stoichiometric gases, p=1 bar - finds h as a function of T (icase=1) or vice-versa (icase<>1)
+th_lambda - excess air lambda, p=1 bar - finds h as a function of T (icase=1) or vice-versa (icase<>1) for
+given lambda
+
+ts_air - air, p=1 bar - finds s as a function of T (icase=1) or vice-versa (icase<>1)
+ts_sto - stoichiometric gases, p=1 bar - finds s as a function of T (icase=1) or vice-versa (icase<>1)
+ts_lambda - excess air lambda, p=1 bar - finds s as a function of T (icase=1) or vice-versa (icase<>1) for
+given lambda
+
+hs_air - air, p=1 bar - finds s as a function of h (icase=1) or vice-versa (icase<>1)
+hs_sto - stoichiometric gases, p=1 bar - finds s as a function of h (icase=1) or vice-versa (icase<>1)
+hs_lambda - gases with excess air lambda, p=1 bar - finds s as a function of h (icase=1) or vice-versa (icase<>1) for
+given lambda
+
+The following routines calculate h-p-s values for air or gases.
+
+Name - Description
+###########################################################################
+hps_air - air, any pressure - finds s, given h, p and r (gas constant)
+
+hsp_air - air, any pressure - finds p, given h, s and r (gas constant)
+
+psh_air - air, any pressure - finds h, given p, s and r (gas constant)
+
+---
+
+hps_lambda - gases with excess air lambda, any pressure - finds s, given h, p, lambda, minL and r
+
+hsp_lambda - gases with excess air lambda, any pressure - finds p, given h, s, lambda, minL and r
+
+psh_lambda - gases with excess air lambda, any pressure - finds h, given p, s, lambda, minL and r
+
+=========================================================
+
+The T-h-s tables are given in the \*.dat files.
+An example of using the subroutines is given in the main.f
+file. To compile the program use the makefile, by typing
+make (on a unix machine).

@@ -20,8 +20,11 @@ async function runExec(formData): Promise<string> {
   console.log("Started runExec function...")
   return await new Promise((resolve, reject) => {
     const program = "./example"
+
     const child = spawn(program, {
-      cwd: "src/thermo-properties/v11",
+      cwd: `src/thermo-properties/${
+        process.env.NODE_ENV === "production" ? "/prod-thermo-tables" : "/dev-thermo-tables"
+      }`,
     })
     let result = ""
 

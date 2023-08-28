@@ -1,0 +1,5 @@
+&INPUT_DATA
+ ICASE=          1,
+ X=  400.00000    ,
+ INTERACTIVE=T,  /
+

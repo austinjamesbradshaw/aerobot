@@ -1,0 +1,36 @@
+EXE      = mix
+FTN      = f77 
+OPTIONS1 = -g
+OPTIONS2 = -g
+#LIBS     = /usr/people/cizmas/util/32/grafic/graficV3/libgrafic.a  -lX11
+LIBS     = 
+
+OBJECTS =      \
+   hps.o       \
+   hps_lambda.o\
+   hs_air.o    \
+   hs_lambda.o \
+   hs_sto.o    \
+   mixingjets.o   \
+   myspline.o  \
+   polint.o    \
+   ratint.o    \
+   spline.o    \
+   splint.o    \
+   ts_air.o    \
+   ts_lambda.o \
+   ts_sto.o    \
+   th_air.o    \
+   th_lambda.o \
+   th_sto.o   
+
+
+.SUFFIXES:      
+.SUFFIXES: .o .f
+
+.f.o  :  ; $(FTN) -c $(OPTIONS1) $*.f
+
+$(EXE) : $(OBJECTS) ; $(FTN) $(OPTIONS2) -o $(EXE) $(OBJECTS) $(LIBS)
+
+$(OBJECTS):
+ 
