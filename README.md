@@ -2,7 +2,7 @@
 
 # **Aerobot**
 
-🔗 Hosted at [https://aerobot.app](https://aerobot.app)
+🔗 Hosted at <a href="https://aerobot.app" target="_blank">https://aerobot.app</a>
 
 ## Background
 Aerobot was created over the summer of 2019 for one of my aerospace engineering professors.
