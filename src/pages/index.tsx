@@ -10,14 +10,14 @@ const Home: BlitzPage = () => {
     <Layout title="Home">
       <VStack spacing={4} px={6} w="100%">
         <FunctionCard
-          name="Shockwave Calculator"
-          description="Calculate post-shock properties"
-          route="shockwave-calculator"
-        />
-        <FunctionCard
           name="Thermodynamic Properties"
           description="For air & combustion products"
           route="thermo-properties"
+        />
+        <FunctionCard
+          name="Shockwave Calculator"
+          description="Calculate post-shock properties"
+          route="shockwave-calculator"
         />
       </VStack>
     </Layout>
