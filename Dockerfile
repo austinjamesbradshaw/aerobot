@@ -7,6 +7,10 @@ ENV NODE_ENV=production
 ENV PATH /home/node/app/node_modules/.bin:$PATH
 ENV TINI_VERSION v0.19.0
 WORKDIR /home/node/app
+RUN apt-get update
+RUN apt-get install gcc
+RUN apt-get install build-essential
+RUN apt-get install gfortran -y
 RUN chown -R node:node /home/node/app
  
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
